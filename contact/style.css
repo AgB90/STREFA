@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: white;
+  box-sizing: border-box;
+
+}
+
+header {
+  margin-bottom: 70px;
+}
+
+
+.banner-wrapper {
+  margin: 20px auto;
+  width: 1200px;
+  height: 160px;
+}
+
+.banner-wrapper img {
+  display: block;
+  width: 100%;
+
+}
+
+.hamburger {
+  position: absolute;
+  left: 14vw;
+
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+
+}
+
+.hamburger_box {
+  /* transform: translateY(200px); */
+  width: 70px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+
+
+}
+
+.hamburger_inner {
+  width: 100%;
+  height: 6px;
+  background-color: #333333;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+
+.hamburger_inner::before,
+.hamburger_inner::after {
+  content: '';
+  width: 100%;
+  height: 6px;
+  background-color: #333333;
+  position: absolute;
+  left: 0;
+  transition: .3s;
+}
+
+.hamburger_inner::before {
+  top: 20px;
+}
+
+.hamburger_inner::after {
+  top: -20px;
+}
+
+.hamburger--active .hamburger_inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger_inner::before {
+  transform: translateY(-20px) rotate(45deg);
+}
+
+
+.hamburger--active .hamburger_inner::after {
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.navigation {
+  height: calc(100vh - 240px);
+  width: 250px;
+
+  /* transform: translateY(200px); */
+  position: absolute;
+  transform: translateX(-250px);
+
+  transition: .3s;
+}
+
+.navigation--active {
+  transform: translateX(0);
+}
+
+.nav_list {
+  list-style: none;
+
+}
+
+.nav_item {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333333;
+  /* border: 2px solid black; */
+  cursor: pointer;
+  transition: .3s;
+  position: relative;
+}
+
+.nav_item a {
+  text-decoration: none;
+  color: #333333;
+  width: 100%;
+  transition: .3s;
+}
+
+.nav_item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  height: 2px;
+  width: 100%;
+  background-color: #00FF00;
+  transform: translateX(-250px);
+  transition: .3s;
+
+}
+
+.nav_item:hover::after {
+  transform: translateX(0);
+}
+
+main {
+  background-color: #CCFFFF;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.adress h1,
+h2 {
+  background-color: #CCFFFF;
+}
+
+.adress h1 {
+  font-size: 30px
+}
+
+.adress h2 {
+  font-size: 20px;
+}
+
+form {
+  background-color: #CCFFFF;
+  padding: 40px;
+}
